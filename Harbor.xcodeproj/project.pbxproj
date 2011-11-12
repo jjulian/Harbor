@@ -37,20 +37,20 @@
 		3E16FE1D146F000F0069B666 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3E16FE1F146F000F0069B666 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E16FE21146F000F0069B666 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3E16FE25146F000F0069B666 /* Harbor-Info.plist */ = {isa = PBXFileReference; path = "Harbor-Info.plist"; sourceTree = "<group>"; };
+		3E16FE25146F000F0069B666 /* Harbor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Harbor-Info.plist"; sourceTree = "<group>"; };
 		3E16FE27146F000F0069B666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E16FE29146F000F0069B666 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3E16FE2B146F000F0069B666 /* Harbor-Prefix.pch */ = {isa = PBXFileReference; path = "Harbor-Prefix.pch"; sourceTree = "<group>"; };
-		3E16FE2C146F000F0069B666 /* HarborAppDelegate.h */ = {isa = PBXFileReference; path = HarborAppDelegate.h; sourceTree = "<group>"; };
+		3E16FE2B146F000F0069B666 /* Harbor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Harbor-Prefix.pch"; sourceTree = "<group>"; };
+		3E16FE2C146F000F0069B666 /* HarborAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HarborAppDelegate.h; sourceTree = "<group>"; };
 		3E16FE2D146F000F0069B666 /* HarborAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HarborAppDelegate.m; sourceTree = "<group>"; };
-		3E16FE2F146F000F0069B666 /* HarborViewController.h */ = {isa = PBXFileReference; path = HarborViewController.h; sourceTree = "<group>"; };
+		3E16FE2F146F000F0069B666 /* HarborViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HarborViewController.h; sourceTree = "<group>"; };
 		3E16FE30146F000F0069B666 /* HarborViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HarborViewController.m; sourceTree = "<group>"; };
 		3E16FE33146F000F0069B666 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HarborViewController.xib; sourceTree = "<group>"; };
 		3E16FE3A146F000F0069B666 /* HarborTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarborTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E16FE3B146F000F0069B666 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		3E16FE43146F000F0069B666 /* HarborTests-Info.plist */ = {isa = PBXFileReference; path = "HarborTests-Info.plist"; sourceTree = "<group>"; };
+		3E16FE43146F000F0069B666 /* HarborTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HarborTests-Info.plist"; sourceTree = "<group>"; };
 		3E16FE45146F000F0069B666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3E16FE47146F000F0069B666 /* HarborTests.h */ = {isa = PBXFileReference; path = HarborTests.h; sourceTree = "<group>"; };
+		3E16FE47146F000F0069B666 /* HarborTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HarborTests.h; sourceTree = "<group>"; };
 		3E16FE48146F000F0069B666 /* HarborTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HarborTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

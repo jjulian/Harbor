@@ -21,6 +21,7 @@
     // Override point for customization after application launch.
     self.viewController = [[HarborViewController alloc] initWithNibName:@"HarborViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HarborViewController : UIViewController
+@interface HarborViewController : UIViewController {
+    IBOutlet UIWebView *webView;
+    IBOutlet UINavigationBar *navBar;
+    NSArray *data;
+}
+
+@property (nonatomic, retain) UIWebView *webView;
+
+- (void)loadUrl:(NSString*)urlAddress;
+- (void)refresh;
 
 @end
+
