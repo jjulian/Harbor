@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E16FE1E146F000F0069B666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE1D146F000F0069B666 /* UIKit.framework */; };
+		3E16FE20146F000F0069B666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE1F146F000F0069B666 /* Foundation.framework */; };
+		3E16FE22146F000F0069B666 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE21146F000F0069B666 /* CoreGraphics.framework */; };
+		3E16FE28146F000F0069B666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E16FE26146F000F0069B666 /* InfoPlist.strings */; };
+		3E16FE2A146F000F0069B666 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE29146F000F0069B666 /* main.m */; };
+		3E16FE2E146F000F0069B666 /* HarborAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE2D146F000F0069B666 /* HarborAppDelegate.m */; };
+		3E16FE31146F000F0069B666 /* HarborViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE30146F000F0069B666 /* HarborViewController.m */; };
+		3E16FE34146F000F0069B666 /* HarborViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16FE32146F000F0069B666 /* HarborViewController.xib */; };
+		3E16FE3C146F000F0069B666 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE3B146F000F0069B666 /* SenTestingKit.framework */; };
+		3E16FE3D146F000F0069B666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE1D146F000F0069B666 /* UIKit.framework */; };
+		3E16FE3E146F000F0069B666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE1F146F000F0069B666 /* Foundation.framework */; };
+		3E16FE46146F000F0069B666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E16FE44146F000F0069B666 /* InfoPlist.strings */; };
+		3E16FE49146F000F0069B666 /* HarborTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE48146F000F0069B666 /* HarborTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E16FE3F146F000F0069B666 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E16FE10146F000F0069B666 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E16FE18146F000F0069B666;
+			remoteInfo = Harbor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E16FE19146F000F0069B666 /* Harbor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Harbor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E16FE1D146F000F0069B666 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3E16FE1F146F000F0069B666 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3E16FE21146F000F0069B666 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3E16FE25146F000F0069B666 /* Harbor-Info.plist */ = {isa = PBXFileReference; path = "Harbor-Info.plist"; sourceTree = "<group>"; };
+		3E16FE27146F000F0069B666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3E16FE29146F000F0069B666 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3E16FE2B146F000F0069B666 /* Harbor-Prefix.pch */ = {isa = PBXFileReference; path = "Harbor-Prefix.pch"; sourceTree = "<group>"; };
+		3E16FE2C146F000F0069B666 /* HarborAppDelegate.h */ = {isa = PBXFileReference; path = HarborAppDelegate.h; sourceTree = "<group>"; };
+		3E16FE2D146F000F0069B666 /* HarborAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HarborAppDelegate.m; sourceTree = "<group>"; };
+		3E16FE2F146F000F0069B666 /* HarborViewController.h */ = {isa = PBXFileReference; path = HarborViewController.h; sourceTree = "<group>"; };
+		3E16FE30146F000F0069B666 /* HarborViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HarborViewController.m; sourceTree = "<group>"; };
+		3E16FE33146F000F0069B666 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HarborViewController.xib; sourceTree = "<group>"; };
+		3E16FE3A146F000F0069B666 /* HarborTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarborTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E16FE3B146F000F0069B666 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3E16FE43146F000F0069B666 /* HarborTests-Info.plist */ = {isa = PBXFileReference; path = "HarborTests-Info.plist"; sourceTree = "<group>"; };
+		3E16FE45146F000F0069B666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3E16FE47146F000F0069B666 /* HarborTests.h */ = {isa = PBXFileReference; path = HarborTests.h; sourceTree = "<group>"; };
+		3E16FE48146F000F0069B666 /* HarborTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HarborTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E16FE16146F000F0069B666 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E16FE1E146F000F0069B666 /* UIKit.framework in Frameworks */,
+				3E16FE20146F000F0069B666 /* Foundation.framework in Frameworks */,
+				3E16FE22146F000F0069B666 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E16FE36146F000F0069B666 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E16FE3C146F000F0069B666 /* SenTestingKit.framework in Frameworks */,
+				3E16FE3D146F000F0069B666 /* UIKit.framework in Frameworks */,
+				3E16FE3E146F000F0069B666 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E16FE0E146F000F0069B666 = {
+			isa = PBXGroup;
+			children = (
+				3E16FE23146F000F0069B666 /* Harbor */,
+				3E16FE41146F000F0069B666 /* HarborTests */,
+				3E16FE1C146F000F0069B666 /* Frameworks */,
+				3E16FE1A146F000F0069B666 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E16FE1A146F000F0069B666 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E16FE19146F000F0069B666 /* Harbor.app */,
+				3E16FE3A146F000F0069B666 /* HarborTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E16FE1C146F000F0069B666 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E16FE1D146F000F0069B666 /* UIKit.framework */,
+				3E16FE1F146F000F0069B666 /* Foundation.framework */,
+				3E16FE21146F000F0069B666 /* CoreGraphics.framework */,
+				3E16FE3B146F000F0069B666 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E16FE23146F000F0069B666 /* Harbor */ = {
+			isa = PBXGroup;
+			children = (
+				3E16FE2C146F000F0069B666 /* HarborAppDelegate.h */,
+				3E16FE2D146F000F0069B666 /* HarborAppDelegate.m */,
+				3E16FE2F146F000F0069B666 /* HarborViewController.h */,
+				3E16FE30146F000F0069B666 /* HarborViewController.m */,
+				3E16FE32146F000F0069B666 /* HarborViewController.xib */,
+				3E16FE24146F000F0069B666 /* Supporting Files */,
+			);
+			path = Harbor;
+			sourceTree = "<group>";
+		};
+		3E16FE24146F000F0069B666 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E16FE25146F000F0069B666 /* Harbor-Info.plist */,
+				3E16FE26146F000F0069B666 /* InfoPlist.strings */,
+				3E16FE29146F000F0069B666 /* main.m */,
+				3E16FE2B146F000F0069B666 /* Harbor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E16FE41146F000F0069B666 /* HarborTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E16FE47146F000F0069B666 /* HarborTests.h */,
+				3E16FE48146F000F0069B666 /* HarborTests.m */,
+				3E16FE42146F000F0069B666 /* Supporting Files */,
+			);
+			path = HarborTests;
+			sourceTree = "<group>";
+		};
+		3E16FE42146F000F0069B666 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E16FE43146F000F0069B666 /* HarborTests-Info.plist */,
+				3E16FE44146F000F0069B666 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E16FE18146F000F0069B666 /* Harbor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E16FE4C146F000F0069B666 /* Build configuration list for PBXNativeTarget "Harbor" */;
+			buildPhases = (
+				3E16FE15146F000F0069B666 /* Sources */,
+				3E16FE16146F000F0069B666 /* Frameworks */,
+				3E16FE17146F000F0069B666 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Harbor;
+			productName = Harbor;
+			productReference = 3E16FE19146F000F0069B666 /* Harbor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E16FE39146F000F0069B666 /* HarborTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E16FE4F146F000F0069B666 /* Build configuration list for PBXNativeTarget "HarborTests" */;
+			buildPhases = (
+				3E16FE35146F000F0069B666 /* Sources */,
+				3E16FE36146F000F0069B666 /* Frameworks */,
+				3E16FE37146F000F0069B666 /* Resources */,
+				3E16FE38146F000F0069B666 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E16FE40146F000F0069B666 /* PBXTargetDependency */,
+			);
+			name = HarborTests;
+			productName = HarborTests;
+			productReference = 3E16FE3A146F000F0069B666 /* HarborTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E16FE10146F000F0069B666 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 3E16FE13146F000F0069B666 /* Build configuration list for PBXProject "Harbor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3E16FE0E146F000F0069B666;
+			productRefGroup = 3E16FE1A146F000F0069B666 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E16FE18146F000F0069B666 /* Harbor */,
+				3E16FE39146F000F0069B666 /* HarborTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E16FE17146F000F0069B666 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E16FE28146F000F0069B666 /* InfoPlist.strings in Resources */,
+				3E16FE34146F000F0069B666 /* HarborViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E16FE37146F000F0069B666 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E16FE46146F000F0069B666 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E16FE38146F000F0069B666 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E16FE15146F000F0069B666 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E16FE2A146F000F0069B666 /* main.m in Sources */,
+				3E16FE2E146F000F0069B666 /* HarborAppDelegate.m in Sources */,
+				3E16FE31146F000F0069B666 /* HarborViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E16FE35146F000F0069B666 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E16FE49146F000F0069B666 /* HarborTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E16FE40146F000F0069B666 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E16FE18146F000F0069B666 /* Harbor */;
+			targetProxy = 3E16FE3F146F000F0069B666 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E16FE26146F000F0069B666 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E16FE27146F000F0069B666 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3E16FE32146F000F0069B666 /* HarborViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E16FE33146F000F0069B666 /* en */,
+			);
+			name = HarborViewController.xib;
+			sourceTree = "<group>";
+		};
+		3E16FE44146F000F0069B666 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E16FE45146F000F0069B666 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E16FE4A146F000F0069B666 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3E16FE4B146F000F0069B666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E16FE4D146F000F0069B666 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Harbor/Harbor-Prefix.pch";
+				INFOPLIST_FILE = "Harbor/Harbor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3E16FE4E146F000F0069B666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Harbor/Harbor-Prefix.pch";
+				INFOPLIST_FILE = "Harbor/Harbor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3E16FE50146F000F0069B666 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Harbor.app/Harbor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Harbor/Harbor-Prefix.pch";
+				INFOPLIST_FILE = "HarborTests/HarborTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3E16FE51146F000F0069B666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Harbor.app/Harbor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Harbor/Harbor-Prefix.pch";
+				INFOPLIST_FILE = "HarborTests/HarborTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E16FE13146F000F0069B666 /* Build configuration list for PBXProject "Harbor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E16FE4A146F000F0069B666 /* Debug */,
+				3E16FE4B146F000F0069B666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E16FE4C146F000F0069B666 /* Build configuration list for PBXNativeTarget "Harbor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E16FE4D146F000F0069B666 /* Debug */,
+				3E16FE4E146F000F0069B666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3E16FE4F146F000F0069B666 /* Build configuration list for PBXNativeTarget "HarborTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E16FE50146F000F0069B666 /* Debug */,
+				3E16FE51146F000F0069B666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E16FE10146F000F0069B666 /* Project object */;
+}
