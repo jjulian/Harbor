@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class HarborViewController;
+@class BrowserViewController;
 
 @interface HarborAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) HarborViewController *viewController;
+@property (strong, nonatomic) BrowserViewController *viewController;
 
 @end

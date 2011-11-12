@@ -6,9 +6,9 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "HarborViewController.h"
+#import "BrowserViewController.h"
 
-@implementation HarborViewController
+@implementation BrowserViewController
 
 - (void)didReceiveMemoryWarning
 {

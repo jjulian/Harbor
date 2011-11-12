@@ -8,7 +8,7 @@
 
 #import "HarborAppDelegate.h"
 
-#import "HarborViewController.h"
+#import "BrowserViewController.h"
 
 @implementation HarborAppDelegate
 
@@ -19,7 +19,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[HarborViewController alloc] initWithNibName:@"HarborViewController" bundle:nil];
+    self.viewController = [[BrowserViewController alloc] initWithNibName:@"HarborViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     
     [self.window makeKeyAndVisible];

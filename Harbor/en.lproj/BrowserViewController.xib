@@ -34,7 +34,7 @@
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
 			<object class="IBUIView" id="766721923">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIWebView" id="790153387">
@@ -42,7 +42,6 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{0, 36}, {768, 987}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:693</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -58,7 +57,7 @@
 						<reference key="NSSuperview" ref="766721923"/>
 						<string key="NSReuseIdentifierKey">_NS:276</string>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<array class="NSMutableArray" key="IBUIItems">
+						<array key="IBUIItems">
 							<object class="IBUINavigationItem" id="326056542">
 								<reference key="IBUINavigationBar" ref="175152504"/>
 								<string key="IBUITitle">Title</string>
@@ -68,8 +67,6 @@
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {768, 1004}}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -175,7 +172,7 @@
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">HarborViewController</string>
+				<string key="-1.CustomClassName">BrowserViewController</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

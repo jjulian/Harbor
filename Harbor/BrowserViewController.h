@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HarborViewController : UIViewController {
+@interface BrowserViewController : UIViewController {
     IBOutlet UIWebView *webView;
     IBOutlet UINavigationBar *navBar;
     NSArray *data;

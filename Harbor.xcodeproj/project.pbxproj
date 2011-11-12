@@ -13,8 +13,8 @@
 		3E16FE28146F000F0069B666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E16FE26146F000F0069B666 /* InfoPlist.strings */; };
 		3E16FE2A146F000F0069B666 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE29146F000F0069B666 /* main.m */; };
 		3E16FE2E146F000F0069B666 /* HarborAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE2D146F000F0069B666 /* HarborAppDelegate.m */; };
-		3E16FE31146F000F0069B666 /* HarborViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE30146F000F0069B666 /* HarborViewController.m */; };
-		3E16FE34146F000F0069B666 /* HarborViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16FE32146F000F0069B666 /* HarborViewController.xib */; };
+		3E16FE31146F000F0069B666 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE30146F000F0069B666 /* BrowserViewController.m */; };
+		3E16FE34146F000F0069B666 /* BrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16FE32146F000F0069B666 /* BrowserViewController.xib */; };
 		3E16FE3C146F000F0069B666 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE3B146F000F0069B666 /* SenTestingKit.framework */; };
 		3E16FE3D146F000F0069B666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE1D146F000F0069B666 /* UIKit.framework */; };
 		3E16FE3E146F000F0069B666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE1F146F000F0069B666 /* Foundation.framework */; };
@@ -45,9 +45,9 @@
 		3E16FE2B146F000F0069B666 /* Harbor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Harbor-Prefix.pch"; sourceTree = "<group>"; };
 		3E16FE2C146F000F0069B666 /* HarborAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HarborAppDelegate.h; sourceTree = "<group>"; };
 		3E16FE2D146F000F0069B666 /* HarborAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HarborAppDelegate.m; sourceTree = "<group>"; };
-		3E16FE2F146F000F0069B666 /* HarborViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HarborViewController.h; sourceTree = "<group>"; };
-		3E16FE30146F000F0069B666 /* HarborViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HarborViewController.m; sourceTree = "<group>"; };
-		3E16FE33146F000F0069B666 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HarborViewController.xib; sourceTree = "<group>"; };
+		3E16FE2F146F000F0069B666 /* BrowserViewController.h */ = {isa = PBXFileReference; path = BrowserViewController.h; sourceTree = "<group>"; };
+		3E16FE30146F000F0069B666 /* BrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
+		3E16FE33146F000F0069B666 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BrowserViewController.xib; sourceTree = "<group>"; };
 		3E16FE3A146F000F0069B666 /* HarborTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarborTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E16FE3B146F000F0069B666 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3E16FE43146F000F0069B666 /* HarborTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HarborTests-Info.plist"; sourceTree = "<group>"; };
@@ -118,12 +118,12 @@
 			children = (
 				3E16FE2C146F000F0069B666 /* HarborAppDelegate.h */,
 				3E16FE2D146F000F0069B666 /* HarborAppDelegate.m */,
-				3E16FE2F146F000F0069B666 /* HarborViewController.h */,
-				3E16FE30146F000F0069B666 /* HarborViewController.m */,
+				3E16FE2F146F000F0069B666 /* BrowserViewController.h */,
+				3E16FE30146F000F0069B666 /* BrowserViewController.m */,
 				3E16FE52146F34E70069B666 /* SiteListViewController.h */,
 				3E16FE53146F34E70069B666 /* SiteListViewController.m */,
 				3E16FE54146F34E70069B666 /* SiteListViewController.xib */,
-				3E16FE32146F000F0069B666 /* HarborViewController.xib */,
+				3E16FE32146F000F0069B666 /* BrowserViewController.xib */,
 				3E16FE24146F000F0069B666 /* Supporting Files */,
 			);
 			path = Harbor;
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E16FE28146F000F0069B666 /* InfoPlist.strings in Resources */,
-				3E16FE34146F000F0069B666 /* HarborViewController.xib in Resources */,
+				3E16FE34146F000F0069B666 /* BrowserViewController.xib in Resources */,
 				3E16FE56146F34E70069B666 /* SiteListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +268,7 @@
 			files = (
 				3E16FE2A146F000F0069B666 /* main.m in Sources */,
 				3E16FE2E146F000F0069B666 /* HarborAppDelegate.m in Sources */,
-				3E16FE31146F000F0069B666 /* HarborViewController.m in Sources */,
+				3E16FE31146F000F0069B666 /* BrowserViewController.m in Sources */,
 				3E16FE55146F34E70069B666 /* SiteListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,12 +300,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		3E16FE32146F000F0069B666 /* HarborViewController.xib */ = {
+		3E16FE32146F000F0069B666 /* BrowserViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3E16FE33146F000F0069B666 /* en */,
 			);
-			name = HarborViewController.xib;
+			name = BrowserViewController.xib;
 			sourceTree = "<group>";
 		};
 		3E16FE44146F000F0069B666 /* InfoPlist.strings */ = {
