@@ -20,6 +20,8 @@
 		3E16FE3E146F000F0069B666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE1F146F000F0069B666 /* Foundation.framework */; };
 		3E16FE46146F000F0069B666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E16FE44146F000F0069B666 /* InfoPlist.strings */; };
 		3E16FE49146F000F0069B666 /* HarborTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE48146F000F0069B666 /* HarborTests.m */; };
+		3E16FE55146F34E70069B666 /* SiteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE53146F34E70069B666 /* SiteListViewController.m */; };
+		3E16FE56146F34E70069B666 /* SiteListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16FE54146F34E70069B666 /* SiteListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,9 @@
 		3E16FE45146F000F0069B666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E16FE47146F000F0069B666 /* HarborTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HarborTests.h; sourceTree = "<group>"; };
 		3E16FE48146F000F0069B666 /* HarborTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HarborTests.m; sourceTree = "<group>"; };
+		3E16FE52146F34E70069B666 /* SiteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteListViewController.h; sourceTree = "<group>"; };
+		3E16FE53146F34E70069B666 /* SiteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteListViewController.m; sourceTree = "<group>"; };
+		3E16FE54146F34E70069B666 /* SiteListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiteListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,9 @@
 				3E16FE2D146F000F0069B666 /* HarborAppDelegate.m */,
 				3E16FE2F146F000F0069B666 /* HarborViewController.h */,
 				3E16FE30146F000F0069B666 /* HarborViewController.m */,
+				3E16FE52146F34E70069B666 /* SiteListViewController.h */,
+				3E16FE53146F34E70069B666 /* SiteListViewController.m */,
+				3E16FE54146F34E70069B666 /* SiteListViewController.xib */,
 				3E16FE32146F000F0069B666 /* HarborViewController.xib */,
 				3E16FE24146F000F0069B666 /* Supporting Files */,
 			);
@@ -223,6 +231,7 @@
 			files = (
 				3E16FE28146F000F0069B666 /* InfoPlist.strings in Resources */,
 				3E16FE34146F000F0069B666 /* HarborViewController.xib in Resources */,
+				3E16FE56146F34E70069B666 /* SiteListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 				3E16FE2A146F000F0069B666 /* main.m in Sources */,
 				3E16FE2E146F000F0069B666 /* HarborAppDelegate.m in Sources */,
 				3E16FE31146F000F0069B666 /* HarborViewController.m in Sources */,
+				3E16FE55146F34E70069B666 /* SiteListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
