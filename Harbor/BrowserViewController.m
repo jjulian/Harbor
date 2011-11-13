@@ -8,10 +8,12 @@
 
 #import "BrowserViewController.h"
 #import "ListViewController.h"
+#import "SBJson.h"
 
 @implementation BrowserViewController
 
 @synthesize webView;
+@synthesize responseData;
 
 - (void)didReceiveMemoryWarning
 {
@@ -30,20 +32,58 @@
 
 - (void)refresh
 {
-    // todo read the teacher id from Settings
+    // read the teacher id from Settings
     NSString *teacherId = [[NSUserDefaults standardUserDefaults] stringForKey:@"teacherIdKey"];
     if (teacherId == nil) {
         teacherId = @"default";
     }
     NSLog(@"teacherId is %@", teacherId);
-
-    //todo get the data from the server
-    // http://example.com/<teacher_id>/current.json
-    // { "name": "Set Name", urls: [] }
     
-    data = [NSArray arrayWithObjects: @"http://google.com/", @"http://facebook.com/", @"http://yahoo.com/", nil];
+    // use this switch to load urls from an array in development (no server needed)
+    if (true) {
+        // set up the request for JSON data
+        NSString *requestUrl = [[@"http://localhost:4567/" stringByAppendingString:teacherId] stringByAppendingString:@"/current.json"];
+        self.responseData = [NSMutableData data];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:requestUrl]];
+        [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    } else {
+        data = [NSArray arrayWithObjects: @"http://google.com/", @"http://facebook.com/", @"http://yahoo.com/", nil];
+        [self handleNewData];
+    }
+}
 
-    //load the first url
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    [responseData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)d {
+    [responseData appendData:d];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	self.responseData = nil;
+    UIAlertView *alertView = [[UIAlertView alloc]
+                              initWithTitle:@"Connection Error"
+                              message:@"Could not get data. Make sure you are connected to the Internet and re-start Harbor."
+                              delegate:nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+    [alertView show];
+}
+
+#pragma mark -
+#pragma mark Process loan data
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+	self.responseData = nil;
+    
+	data = [(NSDictionary*)[responseString JSONValue] objectForKey:@"urls"];
+    //NSString *name = [(NSDictionary*)[responseString JSONValue] objectForKey:@"name"];
+    [self handleNewData];
+}
+
+- (void)handleNewData {
+    //load the first url into the browser
     [self loadUrl:[data objectAtIndex: 0]];
 }
 

@@ -16,11 +16,13 @@
 }
 
 @property (nonatomic, retain) UIWebView *webView;
+@property (nonatomic, retain) NSMutableData *responseData;
 
 - (void)loadUrl:(NSString*)urlAddress;
 - (void)refresh;
 - (IBAction)showSites :(id)sender;
 - (IBAction)closePopover;
+- (void)handleNewData;
 
 @end
 
