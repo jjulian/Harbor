@@ -157,8 +157,13 @@
      */
     NSString *url = [self.urlsArray objectAtIndex:indexPath.row];
     NSLog(@"click on %@", url);
-    [browserViewController loadUrl:url];
-    [browserViewController closePopover];
+    if (url == @"Reload") {
+        [browserViewController refresh];
+        //[self setUrlsArray: [[browserViewController data] arrayByAddingObject:@"Reload"]];
+    } else {
+        [browserViewController loadUrl:url];
+        [browserViewController closePopover];
+    }
 }
 
 @end

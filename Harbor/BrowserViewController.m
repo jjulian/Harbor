@@ -87,6 +87,7 @@
 {
     if (!popoverController) {
         ListViewController *vc = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
+//        [vc setUrlsArray:[data arrayByAddingObject:@"Reload"]];
         [vc setUrlsArray:data];
         [vc setBrowserViewController:self];
         
