@@ -36,9 +36,7 @@
     // { "name": "Set Name", urls: [] }
     // todo read the teacher id from Settings
     
-    data = [NSArray arrayWithObjects: @"http://google.com/", @"http://facebook.com/", nil];
-
-    //todo populate the popover
+    data = [NSArray arrayWithObjects: @"http://google.com/", @"http://facebook.com/", @"http://yahoo.com/", nil];
 }
 
 - (void)viewDidUnload
@@ -86,13 +84,21 @@
 
 - (IBAction)showSites :(id)sender
 {
-    SiteListViewController* vc = [[SiteListViewController alloc] initWithNibName:@"SiteListViewController" bundle:nil];
-    //[vc contentSizeForViewInPopover:];
-    UIPopoverController* popover = [[UIPopoverController alloc] initWithContentViewController:vc];
-    popover.delegate = self;
-    popoverController = popover;
-    [popoverController presentPopoverFromBarButtonItem:sender
-           permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    if (!popoverController) {
+        SiteListViewController* vc = [[SiteListViewController alloc] initWithNibName:@"SiteListViewController" bundle:nil];
+        //todo add sites to table
+        
+        UIPopoverController* popover = [[UIPopoverController alloc] initWithContentViewController:vc];
+        popover.delegate = self;
+        popoverController = popover;
+        [popoverController presentPopoverFromBarButtonItem:sender
+               permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+}
+
+- (void)popoverControllerDidDismissPopover :(UIPopoverController *)pc
+{
+    popoverController = nil;
 }
 
 
