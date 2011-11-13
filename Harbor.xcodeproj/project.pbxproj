@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E06577B147039B80085ADB3 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3F67CA14702A88001E96B4 /* Default-Landscape~ipad.png */; };
+		3E06577D147039BE0085ADB3 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3F67C814702A7A001E96B4 /* Default-Portrait~ipad.png */; };
 		3E16FE1E146F000F0069B666 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE1D146F000F0069B666 /* UIKit.framework */; };
 		3E16FE20146F000F0069B666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE1F146F000F0069B666 /* Foundation.framework */; };
 		3E16FE22146F000F0069B666 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE21146F000F0069B666 /* CoreGraphics.framework */; };
@@ -315,6 +317,8 @@
 				3EF08455146F738700358C4F /* ListViewController.xib in Resources */,
 				3EF08457146F881100358C4F /* Settings.bundle in Resources */,
 				3E3F67CD14702B88001E96B4 /* icon72-01.png in Resources */,
+				3E06577B147039B80085ADB3 /* Default-Landscape~ipad.png in Resources */,
+				3E06577D147039BE0085ADB3 /* Default-Portrait~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
