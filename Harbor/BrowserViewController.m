@@ -7,7 +7,7 @@
 //
 
 #import "BrowserViewController.h"
-#import "SiteListViewController.h"
+#import "ListViewController.h"
 
 @implementation BrowserViewController
 
@@ -85,10 +85,9 @@
 - (IBAction)showSites :(id)sender
 {
     if (!popoverController) {
-        SiteListViewController* vc = [[SiteListViewController alloc] initWithNibName:@"SiteListViewController" bundle:nil];
-        //todo add sites to table
+        ListViewController *vc = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
         
-        UIPopoverController* popover = [[UIPopoverController alloc] initWithContentViewController:vc];
+        UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:vc];
         popover.delegate = self;
         popoverController = popover;
         [popoverController presentPopoverFromBarButtonItem:sender

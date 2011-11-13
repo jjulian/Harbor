@@ -1,5 +1,5 @@
 //
-//  SiteList.h
+//  ListViewController.h
 //  Harbor
 //
 //  Created by Jonathan Julian on 11/12/11.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SiteListViewController : UIViewController
+@interface ListViewController : UITableViewController
+
+@property (nonatomic, retain) NSArray *urlsArray;
 
 @end

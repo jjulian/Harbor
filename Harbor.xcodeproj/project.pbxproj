@@ -20,8 +20,8 @@
 		3E16FE3E146F000F0069B666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E16FE1F146F000F0069B666 /* Foundation.framework */; };
 		3E16FE46146F000F0069B666 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E16FE44146F000F0069B666 /* InfoPlist.strings */; };
 		3E16FE49146F000F0069B666 /* HarborTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE48146F000F0069B666 /* HarborTests.m */; };
-		3E16FE55146F34E70069B666 /* SiteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE53146F34E70069B666 /* SiteListViewController.m */; };
-		3E16FE56146F34E70069B666 /* SiteListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E16FE54146F34E70069B666 /* SiteListViewController.xib */; };
+		3EF08454146F738700358C4F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF08452146F738700358C4F /* ListViewController.m */; };
+		3EF08455146F738700358C4F /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF08453146F738700358C4F /* ListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		3E16FE2B146F000F0069B666 /* Harbor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Harbor-Prefix.pch"; sourceTree = "<group>"; };
 		3E16FE2C146F000F0069B666 /* HarborAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HarborAppDelegate.h; sourceTree = "<group>"; };
 		3E16FE2D146F000F0069B666 /* HarborAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HarborAppDelegate.m; sourceTree = "<group>"; };
-		3E16FE2F146F000F0069B666 /* BrowserViewController.h */ = {isa = PBXFileReference; path = BrowserViewController.h; sourceTree = "<group>"; };
+		3E16FE2F146F000F0069B666 /* BrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
 		3E16FE30146F000F0069B666 /* BrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
 		3E16FE33146F000F0069B666 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BrowserViewController.xib; sourceTree = "<group>"; };
 		3E16FE3A146F000F0069B666 /* HarborTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarborTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,9 +54,9 @@
 		3E16FE45146F000F0069B666 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E16FE47146F000F0069B666 /* HarborTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HarborTests.h; sourceTree = "<group>"; };
 		3E16FE48146F000F0069B666 /* HarborTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HarborTests.m; sourceTree = "<group>"; };
-		3E16FE52146F34E70069B666 /* SiteListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteListViewController.h; sourceTree = "<group>"; };
-		3E16FE53146F34E70069B666 /* SiteListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteListViewController.m; sourceTree = "<group>"; };
-		3E16FE54146F34E70069B666 /* SiteListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiteListViewController.xib; sourceTree = "<group>"; };
+		3EF08451146F738700358C4F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		3EF08452146F738700358C4F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		3EF08453146F738700358C4F /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,11 +120,11 @@
 				3E16FE2D146F000F0069B666 /* HarborAppDelegate.m */,
 				3E16FE2F146F000F0069B666 /* BrowserViewController.h */,
 				3E16FE30146F000F0069B666 /* BrowserViewController.m */,
-				3E16FE52146F34E70069B666 /* SiteListViewController.h */,
-				3E16FE53146F34E70069B666 /* SiteListViewController.m */,
-				3E16FE54146F34E70069B666 /* SiteListViewController.xib */,
 				3E16FE32146F000F0069B666 /* BrowserViewController.xib */,
 				3E16FE24146F000F0069B666 /* Supporting Files */,
+				3EF08451146F738700358C4F /* ListViewController.h */,
+				3EF08452146F738700358C4F /* ListViewController.m */,
+				3EF08453146F738700358C4F /* ListViewController.xib */,
 			);
 			path = Harbor;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 			files = (
 				3E16FE28146F000F0069B666 /* InfoPlist.strings in Resources */,
 				3E16FE34146F000F0069B666 /* BrowserViewController.xib in Resources */,
-				3E16FE56146F34E70069B666 /* SiteListViewController.xib in Resources */,
+				3EF08455146F738700358C4F /* ListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +269,7 @@
 				3E16FE2A146F000F0069B666 /* main.m in Sources */,
 				3E16FE2E146F000F0069B666 /* HarborAppDelegate.m in Sources */,
 				3E16FE31146F000F0069B666 /* BrowserViewController.m in Sources */,
-				3E16FE55146F34E70069B666 /* SiteListViewController.m in Sources */,
+				3EF08454146F738700358C4F /* ListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +441,7 @@
 				3E16FE4E146F000F0069B666 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3E16FE4F146F000F0069B666 /* Build configuration list for PBXNativeTarget "HarborTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +450,7 @@
 				3E16FE51146F000F0069B666 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
