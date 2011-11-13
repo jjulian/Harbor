@@ -12,10 +12,9 @@
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBUIWebView</string>
-			<string>IBUINavigationItem</string>
 			<string>IBUIBarButtonItem</string>
+			<string>IBUIToolbar</string>
 			<string>IBUIView</string>
-			<string>IBUINavigationBar</string>
 			<string>IBProxyObject</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
@@ -41,10 +40,10 @@
 					<object class="IBUIWebView" id="790153387">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{0, 44}, {768, 960}}</string>
+						<string key="NSFrameSize">{768, 960}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="240991530"/>
 						<string key="NSReuseIdentifierKey">_NS:693</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -53,26 +52,29 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIScalesPageToFit">YES</bool>
 					</object>
-					<object class="IBUINavigationBar" id="11512044">
+					<object class="IBUIToolbar" id="240991530">
 						<reference key="NSNextResponder" ref="766721923"/>
-						<int key="NSvFlags">290</int>
-						<string key="NSFrameSize">{768, 44}</string>
+						<int key="NSvFlags">266</int>
+						<string key="NSFrame">{{0, 960}, {768, 44}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="790153387"/>
-						<string key="NSReuseIdentifierKey">_NS:276</string>
+						<reference key="NSNextKeyView"/>
+						<string key="NSReuseIdentifierKey">_NS:372</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<array key="IBUIItems">
-							<object class="IBUINavigationItem" id="740276024">
-								<reference key="IBUINavigationBar" ref="11512044"/>
-								<string key="IBUITitle">Title</string>
-								<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="351786803">
-									<string key="IBUITitle">Sites</string>
-									<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-									<int key="IBUIStyle">1</int>
-									<reference key="IBUINavigationItem" ref="740276024"/>
-								</object>
+						<array class="NSMutableArray" key="IBUIItems">
+							<object class="IBUIBarButtonItem" id="177076366">
+								<string key="IBUITitle">Sites</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUIToolbar" ref="240991530"/>
+							</object>
+							<object class="IBUIBarButtonItem" id="437566520">
+								<string key="IBUITitle">Reload Sites</string>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUIToolbar" ref="240991530"/>
 							</object>
 						</array>
 					</object>
@@ -80,7 +82,7 @@
 				<string key="NSFrame">{{0, 20}, {768, 1004}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="11512044"/>
+				<reference key="NSNextKeyView" ref="790153387"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -123,10 +125,18 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">showSites:</string>
-						<reference key="source" ref="351786803"/>
+						<reference key="source" ref="177076366"/>
 						<reference key="destination" ref="841351856"/>
 					</object>
-					<int key="connectionID">28</int>
+					<int key="connectionID">31</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">reloadSites:</string>
+						<reference key="source" ref="437566520"/>
+						<reference key="destination" ref="841351856"/>
+					</object>
+					<int key="connectionID">33</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -152,7 +162,7 @@
 						<int key="objectID">2</int>
 						<reference key="object" ref="766721923"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="11512044"/>
+							<reference ref="240991530"/>
 							<reference ref="790153387"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -163,25 +173,23 @@
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">25</int>
-						<reference key="object" ref="11512044"/>
+						<int key="objectID">29</int>
+						<reference key="object" ref="240991530"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="740276024"/>
+							<reference ref="177076366"/>
+							<reference ref="437566520"/>
 						</array>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">26</int>
-						<reference key="object" ref="740276024"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="351786803"/>
-						</array>
-						<reference key="parent" ref="11512044"/>
+						<int key="objectID">30</int>
+						<reference key="object" ref="177076366"/>
+						<reference key="parent" ref="240991530"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">27</int>
-						<reference key="object" ref="351786803"/>
-						<reference key="parent" ref="740276024"/>
+						<int key="objectID">32</int>
+						<reference key="object" ref="437566520"/>
+						<reference key="parent" ref="240991530"/>
 					</object>
 				</array>
 			</object>
@@ -191,16 +199,16 @@
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="25.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="26.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="27.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="29.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="30.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="32.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">28</int>
+			<int key="maxID">33</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -209,11 +217,16 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="closePopover">id</string>
+						<string key="reloadSites:">id</string>
 						<string key="showSites:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="closePopover">
 							<string key="name">closePopover</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="reloadSites:">
+							<string key="name">reloadSites:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="showSites:">

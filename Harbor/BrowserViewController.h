@@ -21,6 +21,7 @@
 - (void)loadUrl:(NSString*)urlAddress;
 - (void)refresh;
 - (IBAction)showSites :(id)sender;
+- (IBAction)reloadSites :(id)sender;
 - (IBAction)closePopover;
 - (void)handleNewData;
 
