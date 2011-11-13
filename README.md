@@ -10,4 +10,4 @@ An iPad app that loads sets of urls as pushed by the teacher.
 * With some extension, it can allow teachers to "push" information directly to the student's iPad
 * Teachers can build sets of urls ahead of time, and direct students to them at will *"Open the Harbor app and read through the three pages I've shared. In ten minutes, we'll look at three more."*
 
-![screenshot](http://dl.dropbox.com/u/2460931/Harbor-GeorgeWashington-screenshot.png)
+![screenshot](http://dl.dropbox.com/u/2460931/harbor-revolutionary-war-screenshot.png)
