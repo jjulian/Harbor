@@ -22,6 +22,7 @@
 		3E16FE49146F000F0069B666 /* HarborTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E16FE48146F000F0069B666 /* HarborTests.m */; };
 		3EF08454146F738700358C4F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF08452146F738700358C4F /* ListViewController.m */; };
 		3EF08455146F738700358C4F /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF08453146F738700358C4F /* ListViewController.xib */; };
+		3EF08457146F881100358C4F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3EF08456146F881100358C4F /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3EF08451146F738700358C4F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		3EF08452146F738700358C4F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		3EF08453146F738700358C4F /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		3EF08456146F881100358C4F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				3EF08451146F738700358C4F /* ListViewController.h */,
 				3EF08452146F738700358C4F /* ListViewController.m */,
 				3EF08453146F738700358C4F /* ListViewController.xib */,
+				3EF08456146F881100358C4F /* Settings.bundle */,
 			);
 			path = Harbor;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				3E16FE28146F000F0069B666 /* InfoPlist.strings in Resources */,
 				3E16FE34146F000F0069B666 /* BrowserViewController.xib in Resources */,
 				3EF08455146F738700358C4F /* ListViewController.xib in Resources */,
+				3EF08457146F881100358C4F /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,8 @@
 
 @implementation BrowserViewController
 
+@synthesize webView;
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -24,20 +26,25 @@
     [super viewDidLoad];
     
     [self refresh];
-    
-    //load the first url
-    [self loadUrl:[data objectAtIndex: 0]];
 }
 
 - (void)refresh
 {
     // todo read the teacher id from Settings
+    NSString *teacherId = [[NSUserDefaults standardUserDefaults] stringForKey:@"teacherIdKey"];
+    if (teacherId == nil) {
+        teacherId = @"default";
+    }
+    NSLog(@"teacherId is %@", teacherId);
 
     //todo get the data from the server
     // http://example.com/<teacher_id>/current.json
     // { "name": "Set Name", urls: [] }
     
     data = [NSArray arrayWithObjects: @"http://google.com/", @"http://facebook.com/", @"http://yahoo.com/", nil];
+
+    //load the first url
+    [self loadUrl:[data objectAtIndex: 0]];
 }
 
 - (void)viewDidUnload
@@ -110,5 +117,4 @@
     popoverController = nil;
 }
 
-@synthesize webView;
 @end
