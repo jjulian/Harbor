@@ -24,6 +24,7 @@
 - (IBAction)reloadSites :(id)sender;
 - (IBAction)closePopover;
 - (void)handleNewData;
+- (IBAction)goBack :(id)sender;
 
 @end
 

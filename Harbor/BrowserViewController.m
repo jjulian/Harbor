@@ -42,7 +42,9 @@
     // use this switch to load urls from an array in development (no server needed)
     if (true) {
         // set up the request for JSON data
+        //
         //NSString *baseUrl = @"http://localhost:4567/text?keys=";
+        //
         NSString *baseUrl = @"https://api.cloudmine.me/v1/app/b6f343a25cac4b39a7aa799bdd8c0f47/text?keys=";
         NSString *requestUrl = [baseUrl stringByAppendingString:teacherId];
         self.responseData = [NSMutableData data];
@@ -139,7 +141,6 @@
     if (!popoverController) {
         NSLog (@"building popover");
         ListViewController *vc = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
-//        [vc setUrlsArray:[data arrayByAddingObject:@"Reload"]];
         [vc setUrlsArray:data];
         [vc setBrowserViewController:self];
         
@@ -155,6 +156,11 @@
 {
     NSLog (@"Reload requested");
     [self refresh];
+}
+
+- (IBAction)goBack :(id)sender
+{
+    [webView goBack];
 }
 
 - (void)popoverControllerDidDismissPopover :(UIPopoverController *)pc
