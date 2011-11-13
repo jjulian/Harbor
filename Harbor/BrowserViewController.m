@@ -42,7 +42,9 @@
     // use this switch to load urls from an array in development (no server needed)
     if (true) {
         // set up the request for JSON data
-        NSString *requestUrl = [[@"http://localhost:4567/" stringByAppendingString:teacherId] stringByAppendingString:@"/current.json"];
+        NSString *base = @"http://localhost:4567/text?keys=";
+        //NSString *base = @"https://api.cloudmine.me/v1/app/b6f343a25cac4b39a7aa799bdd8c0f47/text?keys=";
+        NSString *requestUrl = [base stringByAppendingString:teacherId];
         self.responseData = [NSMutableData data];
         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:requestUrl]];
         [[NSURLConnection alloc] initWithRequest:request delegate:self];
@@ -76,9 +78,9 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 	self.responseData = nil;
-    
-	data = [(NSDictionary*)[responseString JSONValue] objectForKey:@"urls"];
-    //NSString *name = [(NSDictionary*)[responseString JSONValue] objectForKey:@"name"];
+
+    NSString *teacherId = [[NSUserDefaults standardUserDefaults] stringForKey:@"teacherIdKey"];  
+	data = [[[(NSDictionary*)[responseString JSONValue] objectForKey:@"success"] objectForKey:teacherId] objectForKey:@"sites"];
     [self handleNewData];
 }
 
