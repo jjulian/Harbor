@@ -31,10 +31,11 @@
 
 - (void)refresh
 {
+    // todo read the teacher id from Settings
+
     //todo get the data from the server
     // http://example.com/<teacher_id>/current.json
     // { "name": "Set Name", urls: [] }
-    // todo read the teacher id from Settings
     
     data = [NSArray arrayWithObjects: @"http://google.com/", @"http://facebook.com/", @"http://yahoo.com/", nil];
 }
@@ -86,6 +87,8 @@
 {
     if (!popoverController) {
         ListViewController *vc = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
+        [vc setUrlsArray:data];
+        [vc setBrowserViewController:self];
         
         UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:vc];
         popover.delegate = self;
@@ -100,6 +103,11 @@
     popoverController = nil;
 }
 
+- (IBAction)closePopover
+{
+    [popoverController dismissPopoverAnimated:YES];
+    popoverController = nil;
+}
 
 @synthesize webView;
 @end

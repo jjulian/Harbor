@@ -20,6 +20,7 @@
 - (void)loadUrl:(NSString*)urlAddress;
 - (void)refresh;
 - (IBAction)showSites :(id)sender;
+- (IBAction)closePopover;
 
 @end
 

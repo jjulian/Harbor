@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BrowserViewController.h"
 
 @interface ListViewController : UITableViewController
 
 @property (nonatomic, retain) NSArray *urlsArray;
+@property (nonatomic, retain) BrowserViewController *browserViewController;
+
+- (IBAction)chooseSite :(id)sender;
 
 @end
