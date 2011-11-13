@@ -12,12 +12,14 @@
     IBOutlet UIWebView *webView;
     IBOutlet UINavigationBar *navBar;
     NSArray *data;
+    UIPopoverController *popoverController;
 }
 
 @property (nonatomic, retain) UIWebView *webView;
 
 - (void)loadUrl:(NSString*)urlAddress;
 - (void)refresh;
+- (IBAction)showSites :(id)sender;
 
 @end
 

@@ -7,6 +7,7 @@
 //
 
 #import "BrowserViewController.h"
+#import "SiteListViewController.h"
 
 @implementation BrowserViewController
 
@@ -82,6 +83,18 @@
     webView.scalesPageToFit = YES;
     //todo set the title of the navBar
 }
+
+- (IBAction)showSites :(id)sender
+{
+    SiteListViewController* vc = [[SiteListViewController alloc] initWithNibName:@"SiteListViewController" bundle:nil];
+    //[vc contentSizeForViewInPopover:];
+    UIPopoverController* popover = [[UIPopoverController alloc] initWithContentViewController:vc];
+    popover.delegate = self;
+    popoverController = popover;
+    [popoverController presentPopoverFromBarButtonItem:sender
+           permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
+
 
 @synthesize webView;
 @end
