@@ -32,6 +32,7 @@
 		3E3F67C314700DFD001E96B4 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F67B514700DFD001E96B4 /* SBJsonTokeniser.m */; };
 		3E3F67C414700DFD001E96B4 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F67B714700DFD001E96B4 /* SBJsonUTF8Stream.m */; };
 		3E3F67C514700DFD001E96B4 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F67B914700DFD001E96B4 /* SBJsonWriter.m */; };
+		3E3F67CD14702B88001E96B4 /* icon72-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3F67CC14702B88001E96B4 /* icon72-01.png */; };
 		3EF08454146F738700358C4F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF08452146F738700358C4F /* ListViewController.m */; };
 		3EF08455146F738700358C4F /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EF08453146F738700358C4F /* ListViewController.xib */; };
 		3EF08457146F881100358C4F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3EF08456146F881100358C4F /* Settings.bundle */; };
@@ -92,6 +93,9 @@
 		3E3F67B714700DFD001E96B4 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonUTF8Stream.m; path = "json-framework/Classes/SBJsonUTF8Stream.m"; sourceTree = "<group>"; };
 		3E3F67B814700DFD001E96B4 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = "json-framework/Classes/SBJsonWriter.h"; sourceTree = "<group>"; };
 		3E3F67B914700DFD001E96B4 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = "json-framework/Classes/SBJsonWriter.m"; sourceTree = "<group>"; };
+		3E3F67C814702A7A001E96B4 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		3E3F67CA14702A88001E96B4 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		3E3F67CC14702B88001E96B4 /* icon72-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon72-01.png"; sourceTree = "<group>"; };
 		3EF08451146F738700358C4F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		3EF08452146F738700358C4F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		3EF08453146F738700358C4F /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
@@ -125,6 +129,9 @@
 		3E16FE0E146F000F0069B666 = {
 			isa = PBXGroup;
 			children = (
+				3E3F67CC14702B88001E96B4 /* icon72-01.png */,
+				3E3F67CA14702A88001E96B4 /* Default-Landscape~ipad.png */,
+				3E3F67C814702A7A001E96B4 /* Default-Portrait~ipad.png */,
 				3E16FE23146F000F0069B666 /* Harbor */,
 				3E16FE41146F000F0069B666 /* HarborTests */,
 				3E16FE1C146F000F0069B666 /* Frameworks */,
@@ -307,6 +314,7 @@
 				3E16FE34146F000F0069B666 /* BrowserViewController.xib in Resources */,
 				3EF08455146F738700358C4F /* ListViewController.xib in Resources */,
 				3EF08457146F881100358C4F /* Settings.bundle in Resources */,
+				3E3F67CD14702B88001E96B4 /* icon72-01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
