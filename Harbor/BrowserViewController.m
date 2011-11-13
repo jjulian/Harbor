@@ -42,11 +42,12 @@
     // use this switch to load urls from an array in development (no server needed)
     if (true) {
         // set up the request for JSON data
-        NSString *base = @"http://localhost:4567/text?keys=";
-        //NSString *base = @"https://api.cloudmine.me/v1/app/b6f343a25cac4b39a7aa799bdd8c0f47/text?keys=";
-        NSString *requestUrl = [base stringByAppendingString:teacherId];
+        //NSString *base = @"http://localhost:4567/text?keys=";
+        NSString *baseUrl = @"https://api.cloudmine.me/v1/app/b6f343a25cac4b39a7aa799bdd8c0f47/text?keys=";
+        NSString *requestUrl = [baseUrl stringByAppendingString:teacherId];
         self.responseData = [NSMutableData data];
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:requestUrl]];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:requestUrl]];
+        [request setValue:@"99ca2c5973394422a839c30948d46b87" forHTTPHeaderField:@"X-CloudMine-ApiKey"];
         [[NSURLConnection alloc] initWithRequest:request delegate:self];
     } else {
         data = [NSArray arrayWithObjects: @"http://google.com/", @"http://facebook.com/", @"http://yahoo.com/", nil];
