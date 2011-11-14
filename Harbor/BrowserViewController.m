@@ -146,7 +146,7 @@
         
         UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:vc];
         popover.delegate = self;
-        popover.popoverContentSize = CGSizeMake(420, 44 * (sizeof(data) - 1));
+        popover.popoverContentSize = CGSizeMake(420, 44 * (sizeof(data) - 1)); // todo - this computation needs work, it's always too small
         popoverController = popover;
         [popoverController presentPopoverFromBarButtonItem:sender
                permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
