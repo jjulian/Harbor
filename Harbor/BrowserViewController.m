@@ -8,7 +8,7 @@
 
 #import "BrowserViewController.h"
 #import "ListViewController.h"
-#import <SBJson/SBJson.h>
+#import "SBJson.h"
 
 @implementation BrowserViewController
 
