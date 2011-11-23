@@ -47,6 +47,7 @@
         NSString *baseUrl = @"https://api.cloudmine.me/v1/app/b6f343a25cac4b39a7aa799bdd8c0f47/text?keys=";
 #endif
         NSString *requestUrl = [baseUrl stringByAppendingString:teacherId];
+        NSLog(@"url %@", requestUrl);
         self.responseData = [NSMutableData data];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:requestUrl]];
         [request setValue:@"99ca2c5973394422a839c30948d46b87" forHTTPHeaderField:@"X-CloudMine-ApiKey"];
@@ -66,6 +67,7 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"connection failed %@", error);
 	self.responseData = nil;
     UIAlertView *alertView = [[UIAlertView alloc]
                               initWithTitle:@"Connection Error"
@@ -85,6 +87,9 @@
     NSString *teacherId = [[NSUserDefaults standardUserDefaults] stringForKey:@"teacherIdKey"];  
 	data = [[[(NSDictionary*)[responseString JSONValue] objectForKey:@"success"] objectForKey:teacherId] objectForKey:@"sites"];
     [self handleNewData];
+#ifdef TEST_FLIGHT
+    [TestFlight passCheckpoint:@"UrlsLoaded"];
+#endif
 }
 
 - (void)handleNewData {

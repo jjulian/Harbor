@@ -7,7 +7,6 @@
 //
 
 #import "HarborAppDelegate.h"
-
 #import "BrowserViewController.h"
 
 @implementation HarborAppDelegate
@@ -22,6 +21,10 @@
     self.viewController = [[BrowserViewController alloc] initWithNibName:@"BrowserViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     
+#ifdef TEST_FLIGHT
+    [TestFlight takeOff:@"1cace5876fa109a46c65c10c686893fe_NDIyMDEyMDExLTExLTE5IDIxOjAzOjMzLjk5MjExNQ"];
+#endif
+
     [self.window makeKeyAndVisible];
     return YES;
 }
