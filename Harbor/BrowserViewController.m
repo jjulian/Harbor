@@ -81,16 +81,14 @@
 
 - (IBAction)showSites :(id)sender
 {
-    //NSLog (@"Sites requested");
     if (!popoverController) {
-        //NSLog (@"building popover");
         ListViewController *vc = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
         [vc setUrlsArray:data];
         [vc setBrowserViewController:self];
         
         UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:vc];
         popover.delegate = (id)self;
-        popover.popoverContentSize = CGSizeMake(420, 44 * (sizeof(data) - 1)); // todo - this computation needs work, it's always too small
+        popover.popoverContentSize = CGSizeMake(420, 44 * data.count);
         popoverController = popover;
         [popoverController presentPopoverFromBarButtonItem:sender
                permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
