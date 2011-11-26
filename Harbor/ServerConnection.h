@@ -13,10 +13,11 @@
 @property (nonatomic, strong) NSMutableData *responseData;
 @property (nonatomic, strong) NSString *teacherId;
 @property (nonatomic, strong) NSObject *callback;
+@property (nonatomic, strong) UITextField *teacherIdInput;
 
 - (void)callback:(NSObject *)c;
 - (void)reload;
-- (NSString *)findTeacherId;
+- (void)findTeacherId;
 - (void)completion:(NSArray *)data;
 
 
