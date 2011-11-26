@@ -53,12 +53,13 @@
     } else {
         UIAlertView* dialog = [[UIAlertView alloc] init];
         [dialog setDelegate:self];
-        [dialog setTitle:@"Enter Teacher Id"];
+        [dialog setTitle:@"Enter your Teacher Id"];
         [dialog setMessage:@"\n"]; // give it space to breathe
         [dialog addButtonWithTitle:@"Cancel"];
-        [dialog addButtonWithTitle:@"OK"];
+        [dialog addButtonWithTitle:@"Save"];
         teacherIdInput = [[UITextField alloc] initWithFrame:CGRectMake(20.0, 45.0, 245.0, 25.0)];
         [teacherIdInput setBackgroundColor:[UIColor whiteColor]];
+        teacherIdInput.accessibilityLabel = @"Teacher ID";
         [dialog addSubview:teacherIdInput];
         [dialog show];        
     }
