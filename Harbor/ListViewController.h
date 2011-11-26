@@ -14,6 +14,4 @@
 @property (nonatomic, retain) NSArray *urlsArray;
 @property (nonatomic, retain) BrowserViewController *browserViewController;
 
-- (IBAction)chooseSite :(id)sender;
-
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E033BE414815F0100D25B86 /* ServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E033BE314815F0100D25B86 /* ServerConnection.m */; };
 		3E06577B147039B80085ADB3 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3F67CA14702A88001E96B4 /* Default-Landscape~ipad.png */; };
 		3E06577D147039BE0085ADB3 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3F67C814702A7A001E96B4 /* Default-Portrait~ipad.png */; };
 		3E0AC25914794851002E9721 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0AC24114794851002E9721 /* NSObject+SBJson.m */; };
@@ -90,6 +91,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E033BE214815F0100D25B86 /* ServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerConnection.h; sourceTree = "<group>"; };
+		3E033BE314815F0100D25B86 /* ServerConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerConnection.m; sourceTree = "<group>"; };
 		3E0AC24014794851002E9721 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		3E0AC24114794851002E9721 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		3E0AC24214794851002E9721 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -271,6 +274,8 @@
 				3EF08452146F738700358C4F /* ListViewController.m */,
 				3EF08453146F738700358C4F /* ListViewController.xib */,
 				3EF08456146F881100358C4F /* Settings.bundle */,
+				3E033BE214815F0100D25B86 /* ServerConnection.h */,
+				3E033BE314815F0100D25B86 /* ServerConnection.m */,
 			);
 			path = Harbor;
 			sourceTree = "<group>";
@@ -506,6 +511,7 @@
 				3E0AC27414794851002E9721 /* SBJsonTokeniser.m in Sources */,
 				3E0AC27714794851002E9721 /* SBJsonUTF8Stream.m in Sources */,
 				3E0AC27A14794851002E9721 /* SBJsonWriter.m in Sources */,
+				3E033BE414815F0100D25B86 /* ServerConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

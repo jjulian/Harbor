@@ -156,7 +156,7 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
     NSString *url = [self.urlsArray objectAtIndex:indexPath.row];
-    NSLog(@"click on %@", url);
+    //NSLog(@"click on %@", url);
     if (url == @"Reload") {
         [browserViewController refresh];
         //[self setUrlsArray: [[browserViewController data] arrayByAddingObject:@"Reload"]];
