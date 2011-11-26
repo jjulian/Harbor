@@ -68,6 +68,9 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
         teacherId = [teacherIdInput text];
+        if (teacherId != nil) {
+            teacherId = [teacherId lowercaseString]; // the alert sometimes capitalizes the first letter
+        }
         [[NSUserDefaults standardUserDefaults] setValue:teacherId forKey:@"teacherIdKey"];
         if (teacherId != nil && teacherId.length > 0) {
             [self reload];
