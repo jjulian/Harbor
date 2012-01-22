@@ -24,6 +24,15 @@
 
 #pragma mark - View lifecycle
 
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    NSLog(@"initWithCoder");
+    if (self) {
+        loadingNewSite = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -60,6 +69,8 @@
     [webView loadRequest:requestObj];
     webView.scalesPageToFit = YES;
     //todo set the title of the navBar
+    
+    loadingNewSite = YES;
 }
 
 - (IBAction)reloadSites :(id)sender {
@@ -133,7 +144,10 @@
 #pragma mark - Webview Delegate
 
 - (BOOL) webView:(UIWebView *) view shouldStartLoadWithRequest:(NSURLRequest *) request navigationType:(UIWebViewNavigationType) navigationType {
-    return YES;
+    if (loadingNewSite || [view.request.URL.host isEqualToString:request.URL.host]) {
+        return YES;
+    }
+    return NO;
 }
 
 - (void) webViewDidStartLoad:(UIWebView *) view {
@@ -141,6 +155,7 @@
 
 - (void) webViewDidFinishLoad:(UIWebView *) view {
     [self updateForwardBackButtons];
+    loadingNewSite = NO;
 }
 
 - (void) webView:(UIWebView *) view didFailLoadWithError:(NSError *) error {

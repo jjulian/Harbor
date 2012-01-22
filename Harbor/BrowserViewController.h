@@ -18,6 +18,8 @@
     NSArray *data;
     UIPopoverController *popoverController;
     ServerConnection *conn;
+    
+    BOOL loadingNewSite;
 }
 
 @property (nonatomic, retain) UIWebView *webView;
