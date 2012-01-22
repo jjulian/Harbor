@@ -14,6 +14,7 @@
     IBOutlet UINavigationBar *navBar;
     IBOutlet UIBarButtonItem *backButton;
     IBOutlet UIBarButtonItem *forwardButton;
+    IBOutlet UILabel *pageTitle;
     
     NSArray *data;
     UIPopoverController *popoverController;

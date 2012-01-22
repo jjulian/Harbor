@@ -68,7 +68,6 @@
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
     webView.scalesPageToFit = YES;
-    //todo set the title of the navBar
     
     loadingNewSite = YES;
 }
@@ -156,6 +155,8 @@
 - (void) webViewDidFinishLoad:(UIWebView *) view {
     [self updateForwardBackButtons];
     loadingNewSite = NO;
+    
+    pageTitle.text = [view stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 
 - (void) webView:(UIWebView *) view didFailLoadWithError:(NSError *) error {
