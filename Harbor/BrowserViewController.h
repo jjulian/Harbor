@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ServerConnection.h"
 
-@interface BrowserViewController : UIViewController {
+@interface BrowserViewController : UIViewController <UIWebViewDelegate> {
     IBOutlet UIWebView *webView;
     IBOutlet UINavigationBar *navBar;
+    IBOutlet UIBarButtonItem *backButton;
+    IBOutlet UIBarButtonItem *forwardButton;
+    
     NSArray *data;
     UIPopoverController *popoverController;
     ServerConnection *conn;
@@ -25,7 +28,9 @@
 - (IBAction)reloadSites :(id)sender;
 - (IBAction)closePopover;
 - (void)handleNewData:(NSArray *)d;
+
 - (IBAction)goBack :(id)sender;
+- (IBAction) goForward:(id) sender;
 
 @end
 

@@ -10,6 +10,10 @@
 #import "SBJson.h"
 #import "BrowserViewController.h"
 
+
+#define NO_SERVER TRUE
+
+
 @implementation ServerConnection
 
 @synthesize responseData;
@@ -34,7 +38,7 @@
     if (teacherId != nil && teacherId.length > 0) {
 #if NO_SERVER
         NSLog(@"NO_SERVER");
-        NSArray *data = [NSArray arrayWithObjects: @"http://google.com/", @"http://facebook.com/", @"http://yahoo.com/", nil];
+        NSArray *data = [NSArray arrayWithObjects: @"http://en.wikipedia.org/wiki/Main_Page", @"http://google.com/", @"http://facebook.com/", @"http://yahoo.com/", nil];
         [self completion:data];
 #else
 #if LOCAL_SERVER
