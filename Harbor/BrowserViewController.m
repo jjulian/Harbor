@@ -88,6 +88,10 @@
 
 #pragma mark - Web View Actions
 
+- (IBAction) refreshButtonPressed:(id)sender {
+    [self refresh];
+}
+
 - (void)refresh {
     [conn reload];
 }

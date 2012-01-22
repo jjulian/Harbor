@@ -35,6 +35,7 @@
 
 - (IBAction)goBack :(id)sender;
 - (IBAction) goForward:(id) sender;
+- (IBAction) refreshButtonPressed:(id)sender;
 
 @end
 

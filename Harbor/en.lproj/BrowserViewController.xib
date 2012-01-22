@@ -84,15 +84,27 @@
 								<float key="IBUIWidth">30</float>
 								<reference key="IBUIToolbar" ref="117611381"/>
 							</object>
+							<object class="IBUIBarButtonItem" id="865796822">
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">refresh-button.png</string>
+								</object>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<float key="IBUIWidth">22</float>
+								<reference key="IBUIToolbar" ref="117611381"/>
+							</object>
 							<object class="IBUIBarButtonItem" id="661588933">
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<reference key="IBUIToolbar" ref="117611381"/>
 								<int key="IBUISystemItemIdentifier">5</int>
 							</object>
 							<object class="IBUIBarButtonItem" id="582319113">
-								<string key="IBUITitle">Sync</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">sync-button.png</string>
+								</object>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<int key="IBUIStyle">1</int>
+								<float key="IBUIWidth">30</float>
 								<reference key="IBUIToolbar" ref="117611381"/>
 							</object>
 							<object class="IBUIBarButtonItem" id="600911900">
@@ -271,6 +283,14 @@
 					</object>
 					<int key="connectionID">47</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">refreshButtonPressed:</string>
+						<reference key="source" ref="865796822"/>
+						<reference key="destination" ref="841351856"/>
+					</object>
+					<int key="connectionID">60</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -296,9 +316,9 @@
 						<reference key="object" ref="766721923"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="790153387"/>
-							<reference ref="117611381"/>
 							<reference ref="150955603"/>
 							<reference ref="619715724"/>
+							<reference ref="117611381"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -316,6 +336,7 @@
 							<reference ref="661588933"/>
 							<reference ref="582319113"/>
 							<reference ref="629556828"/>
+							<reference ref="865796822"/>
 						</array>
 						<reference key="parent" ref="766721923"/>
 					</object>
@@ -361,6 +382,12 @@
 						<reference key="parent" ref="766721923"/>
 						<string key="objectName">Acitvity Indicator</string>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">58</int>
+						<reference key="object" ref="865796822"/>
+						<reference key="parent" ref="117611381"/>
+						<string key="objectName">Forward</string>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -378,12 +405,13 @@
 				<string key="45.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="54.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="56.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="58.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">57</int>
+			<int key="maxID">60</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -394,6 +422,7 @@
 						<string key="closePopover">id</string>
 						<string key="goBack:">id</string>
 						<string key="goForward:">id</string>
+						<string key="refreshButtonPressed:">id</string>
 						<string key="reloadSites:">id</string>
 						<string key="showSites:">id</string>
 					</dictionary>
@@ -408,6 +437,10 @@
 						</object>
 						<object class="IBActionInfo" key="goForward:">
 							<string key="name">goForward:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="refreshButtonPressed:">
+							<string key="name">refreshButtonPressed:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="reloadSites:">
@@ -465,8 +498,10 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="back-button.png">{15, 20}</string>
-			<string key="forward-button.png">{15, 20}</string>
+			<string key="back-button.png">{15, 19}</string>
+			<string key="forward-button.png">{15, 19}</string>
+			<string key="refresh-button.png">{16, 19}</string>
+			<string key="sync-button.png">{16, 19}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>

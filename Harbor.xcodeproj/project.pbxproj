@@ -73,6 +73,8 @@
 		3EF08457146F881100358C4F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3EF08456146F881100358C4F /* Settings.bundle */; };
 		92013C4114CCB70B007D1194 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 92013C3F14CCB70B007D1194 /* back-button.png */; };
 		92013C4214CCB70B007D1194 /* forward-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 92013C4014CCB70B007D1194 /* forward-button.png */; };
+		929905AD14CCD0A7004C9AC2 /* refresh-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 929905AB14CCD0A7004C9AC2 /* refresh-button.png */; };
+		929905AE14CCD0A7004C9AC2 /* sync-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 929905AC14CCD0A7004C9AC2 /* sync-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,8 @@
 		3EF08456146F881100358C4F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		92013C3F14CCB70B007D1194 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
 		92013C4014CCB70B007D1194 /* forward-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-button.png"; sourceTree = "<group>"; };
+		929905AB14CCD0A7004C9AC2 /* refresh-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh-button.png"; sourceTree = "<group>"; };
+		929905AC14CCD0A7004C9AC2 /* sync-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sync-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +353,8 @@
 		92013C3E14CCB70B007D1194 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				929905AB14CCD0A7004C9AC2 /* refresh-button.png */,
+				929905AC14CCD0A7004C9AC2 /* sync-button.png */,
 				92013C3F14CCB70B007D1194 /* back-button.png */,
 				92013C4014CCB70B007D1194 /* forward-button.png */,
 			);
@@ -456,6 +462,8 @@
 				3EEBBC30147CB3DB00C5B74A /* release_notes.txt in Resources */,
 				92013C4114CCB70B007D1194 /* back-button.png in Resources */,
 				92013C4214CCB70B007D1194 /* forward-button.png in Resources */,
+				929905AD14CCD0A7004C9AC2 /* refresh-button.png in Resources */,
+				929905AE14CCD0A7004C9AC2 /* sync-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
