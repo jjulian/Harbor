@@ -12,14 +12,18 @@
 
 @interface BrowserViewController (private)
 - (void) updateForwardBackButtons;
+- (void) fadeOutPage;
+- (void) fadeInPage;
 @end
+
+
+
 
 @implementation BrowserViewController
 @synthesize webView;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -37,6 +41,7 @@
     [super viewDidLoad];
     
     webView.delegate = self;
+    activityIndicator.alpha = 0;
     
     conn = [[ServerConnection alloc] init];
     [conn callback:self];
@@ -150,6 +155,7 @@
 }
 
 - (void) webViewDidStartLoad:(UIWebView *) view {
+    [self fadeOutPage];
 }
 
 - (void) webViewDidFinishLoad:(UIWebView *) view {
@@ -157,9 +163,36 @@
     loadingNewSite = NO;
     
     pageTitle.text = [view stringByEvaluatingJavaScriptFromString:@"document.title"];
+    
+    [self fadeInPage];
 }
 
 - (void) webView:(UIWebView *) view didFailLoadWithError:(NSError *) error {
+}
+
+
+- (void) fadeOutPage {
+    webView.userInteractionEnabled = NO;
+    activityIndicator.hidden = NO;
+    [UIView animateWithDuration:.3 delay:0 options:UIViewAnimationCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
+        webView.alpha = 0;
+        pageTitle.alpha = 0;
+        activityIndicator.alpha=1;
+        [activityIndicator startAnimating];
+    } completion:^(BOOL finished) {
+    }];
+}
+
+- (void) fadeInPage {
+    webView.userInteractionEnabled = YES;
+    [UIView animateWithDuration:.3 delay:0 options:UIViewAnimationCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
+        webView.alpha = 1;
+        pageTitle.alpha = 1;
+        activityIndicator.alpha = 0;
+    } completion:^(BOOL finished) {
+        [activityIndicator stopAnimating];
+        activityIndicator.hidden = YES;
+    }];
 }
 
 

@@ -15,6 +15,7 @@
     IBOutlet UIBarButtonItem *backButton;
     IBOutlet UIBarButtonItem *forwardButton;
     IBOutlet UILabel *pageTitle;
+    IBOutlet UIActivityIndicatorView *activityIndicator;
     
     NSArray *data;
     UIPopoverController *popoverController;
