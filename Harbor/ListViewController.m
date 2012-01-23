@@ -8,8 +8,6 @@
 
 #import "ListViewController.h"
 
-#import "ListItem.h"
-
 @implementation ListViewController
 
 @synthesize urlsArray;
@@ -19,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableView setRowHeight:62];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -33,7 +30,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.urlsArray.count/2;
+    return self.urlsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -41,12 +38,10 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"ListItem" owner:self options:nil] objectAtIndex:0];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    // Again, this is dependant on alternating page titles/urls in the array which isn't ideal
-    ((ListItem *) cell).titleLabel.text = [self.urlsArray objectAtIndex:indexPath.row*2+1];
-    ((ListItem *) cell).urlLabel.text = [self.urlsArray objectAtIndex:indexPath.row*2];
+    cell.textLabel.text = [self.urlsArray objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -55,8 +50,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Once more, adjusting for alternating data array
-    NSString *url = [self.urlsArray objectAtIndex:indexPath.row*2];
+    NSString *url = [self.urlsArray objectAtIndex:indexPath.row];
     if (url == @"Reload") {
         [browserViewController refresh];
     } else {
