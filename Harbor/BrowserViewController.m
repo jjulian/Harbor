@@ -41,7 +41,7 @@
     [super viewDidLoad];
     
     webView.delegate = self;
-    activityIndicator.alpha = 0;
+    webviewOverlay.alpha = 0;
     
     conn = [[ServerConnection alloc] init];
     [conn callback:self];
@@ -182,9 +182,8 @@
     webView.userInteractionEnabled = NO;
     activityIndicator.hidden = NO;
     [UIView animateWithDuration:.3 delay:0 options:UIViewAnimationCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
-        webView.alpha = 0;
         pageTitle.alpha = 0;
-        activityIndicator.alpha=1;
+        webviewOverlay.alpha=1;
         [activityIndicator startAnimating];
     } completion:^(BOOL finished) {
     }];
@@ -193,9 +192,8 @@
 - (void) fadeInPage {
     webView.userInteractionEnabled = YES;
     [UIView animateWithDuration:.3 delay:0 options:UIViewAnimationCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
-        webView.alpha = 1;
         pageTitle.alpha = 1;
-        activityIndicator.alpha = 0;
+        webviewOverlay.alpha = 0;
     } completion:^(BOOL finished) {
         [activityIndicator stopAnimating];
         activityIndicator.hidden = YES;
