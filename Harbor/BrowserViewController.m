@@ -175,6 +175,9 @@
 }
 
 
+
+#pragma mark -
+
 - (void) fadeOutPage {
     webView.userInteractionEnabled = NO;
     activityIndicator.hidden = NO;

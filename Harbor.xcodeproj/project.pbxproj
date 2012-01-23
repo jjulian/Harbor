@@ -73,6 +73,8 @@
 		3EF08457146F881100358C4F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3EF08456146F881100358C4F /* Settings.bundle */; };
 		92013C4114CCB70B007D1194 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 92013C3F14CCB70B007D1194 /* back-button.png */; };
 		92013C4214CCB70B007D1194 /* forward-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 92013C4014CCB70B007D1194 /* forward-button.png */; };
+		927400D814CCE9DB00F776A6 /* ListItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 927400D714CCE9DB00F776A6 /* ListItem.xib */; };
+		927400DB14CCE9FB00F776A6 /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 927400DA14CCE9FB00F776A6 /* ListItem.m */; };
 		929905AD14CCD0A7004C9AC2 /* refresh-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 929905AB14CCD0A7004C9AC2 /* refresh-button.png */; };
 		929905AE14CCD0A7004C9AC2 /* sync-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 929905AC14CCD0A7004C9AC2 /* sync-button.png */; };
 /* End PBXBuildFile section */
@@ -160,6 +162,9 @@
 		3EF08456146F881100358C4F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		92013C3F14CCB70B007D1194 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
 		92013C4014CCB70B007D1194 /* forward-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-button.png"; sourceTree = "<group>"; };
+		927400D714CCE9DB00F776A6 /* ListItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListItem.xib; sourceTree = "<group>"; };
+		927400D914CCE9FB00F776A6 /* ListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItem.h; sourceTree = "<group>"; };
+		927400DA14CCE9FB00F776A6 /* ListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItem.m; sourceTree = "<group>"; };
 		929905AB14CCD0A7004C9AC2 /* refresh-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh-button.png"; sourceTree = "<group>"; };
 		929905AC14CCD0A7004C9AC2 /* sync-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sync-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,6 +277,7 @@
 		3E16FE23146F000F0069B666 /* Harbor */ = {
 			isa = PBXGroup;
 			children = (
+				927400D614CCE99B00F776A6 /* Popup List */,
 				92013C3E14CCB70B007D1194 /* Images */,
 				3E16FE2C146F000F0069B666 /* HarborAppDelegate.h */,
 				3E16FE2D146F000F0069B666 /* HarborAppDelegate.m */,
@@ -279,10 +285,6 @@
 				3E16FE30146F000F0069B666 /* BrowserViewController.m */,
 				3E16FE32146F000F0069B666 /* BrowserViewController.xib */,
 				3E16FE24146F000F0069B666 /* Supporting Files */,
-				3EF08451146F738700358C4F /* ListViewController.h */,
-				3EF08452146F738700358C4F /* ListViewController.m */,
-				3EF08453146F738700358C4F /* ListViewController.xib */,
-				3EF08456146F881100358C4F /* Settings.bundle */,
 				3E033BE214815F0100D25B86 /* ServerConnection.h */,
 				3E033BE314815F0100D25B86 /* ServerConnection.m */,
 			);
@@ -292,6 +294,7 @@
 		3E16FE24146F000F0069B666 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3EF08456146F881100358C4F /* Settings.bundle */,
 				3E16FE25146F000F0069B666 /* Harbor-Info.plist */,
 				3E16FE26146F000F0069B666 /* InfoPlist.strings */,
 				3E16FE29146F000F0069B666 /* main.m */,
@@ -360,6 +363,19 @@
 			);
 			path = Images;
 			sourceTree = SOURCE_ROOT;
+		};
+		927400D614CCE99B00F776A6 /* Popup List */ = {
+			isa = PBXGroup;
+			children = (
+				3EF08451146F738700358C4F /* ListViewController.h */,
+				3EF08452146F738700358C4F /* ListViewController.m */,
+				3EF08453146F738700358C4F /* ListViewController.xib */,
+				927400D914CCE9FB00F776A6 /* ListItem.h */,
+				927400DA14CCE9FB00F776A6 /* ListItem.m */,
+				927400D714CCE9DB00F776A6 /* ListItem.xib */,
+			);
+			name = "Popup List";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -464,6 +480,7 @@
 				92013C4214CCB70B007D1194 /* forward-button.png in Resources */,
 				929905AD14CCD0A7004C9AC2 /* refresh-button.png in Resources */,
 				929905AE14CCD0A7004C9AC2 /* sync-button.png in Resources */,
+				927400D814CCE9DB00F776A6 /* ListItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +553,7 @@
 				3E0AC27714794851002E9721 /* SBJsonUTF8Stream.m in Sources */,
 				3E0AC27A14794851002E9721 /* SBJsonWriter.m in Sources */,
 				3E033BE414815F0100D25B86 /* ServerConnection.m in Sources */,
+				927400DB14CCE9FB00F776A6 /* ListItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

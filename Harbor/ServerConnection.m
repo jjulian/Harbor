@@ -38,7 +38,10 @@
     if (teacherId != nil && teacherId.length > 0) {
 #if NO_SERVER
         NSLog(@"NO_SERVER");
-        NSArray *data = [NSArray arrayWithObjects: @"http://en.wikipedia.org/wiki/Main_Page", @"http://google.com/", @"http://facebook.com/", @"http://yahoo.com/", nil];
+        // I'm alternating between title and url here to quickly show more data
+        // this should be done with a more complex data model though which would include more info for each
+        // page such as how links should be handled (no links/links to this domain/all links)
+        NSArray *data = [NSArray arrayWithObjects: @"http://en.wikipedia.org/wiki/Main_Page", @"Wikipedia", @"http://google.com/", @"Google", @"http://facebook.com/", @"Facebook", @"http://yahoo.com/", @"Yahoo", nil];
         [self completion:data];
 #else
 #if LOCAL_SERVER
