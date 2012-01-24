@@ -9,59 +9,57 @@
 #import "BrowserViewController.h"
 #import "ListViewController.h"
 
-@implementation BrowserViewController
 
+@interface BrowserViewController (private)
+- (void) updateForwardBackButtons;
+- (void) fadeOutPage;
+- (void) fadeInPage;
+@end
+
+
+
+
+@implementation BrowserViewController
 @synthesize webView;
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    NSLog(@"initWithCoder");
+    if (self) {
+        loadingNewSite = YES;
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
     [super viewDidLoad];
+    
+    webView.delegate = self;
+    webviewOverlay.alpha = 0;
     
     conn = [[ServerConnection alloc] init];
     [conn callback:self];
     [conn reload];
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return YES;
 }
+
+
+
+
+#pragma mark - 
 
 - (void)handleNewData:(NSArray *)d {
     data = d;
@@ -69,18 +67,62 @@
     [self loadUrl:[data objectAtIndex: 0]];
 }
 
-- (void)loadUrl:(NSString*)urlAddress
-{
+- (void)loadUrl:(NSString*)urlAddress {
     NSLog (@"Displaying %@", urlAddress);
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
     webView.scalesPageToFit = YES;
-    //todo set the title of the navBar
+    
+    loadingNewSite = YES;
 }
 
-- (IBAction)showSites :(id)sender
-{
+- (IBAction)reloadSites :(id)sender {
+    //NSLog (@"Reload requested");
+    [conn reload];
+}
+
+
+
+
+
+#pragma mark - Web View Actions
+
+- (IBAction) refreshButtonPressed:(id)sender {
+    [self refresh];
+}
+
+- (void)refresh {
+    [conn reload];
+}
+
+- (IBAction) goBack:(id) sender {
+    [webView goBack];
+}
+
+- (IBAction) goForward:(id) sender {
+    [webView goForward];
+}
+
+- (void) updateForwardBackButtons {
+    if (webView.canGoBack) {
+        backButton.enabled = YES;
+    } else {
+        backButton.enabled = NO;
+    }
+    if (webView.canGoForward) {
+        forwardButton.enabled = YES;
+    } else {
+        forwardButton.enabled = NO;
+    }
+}
+
+
+
+
+#pragma mark - Popup List
+
+- (IBAction)showSites :(id)sender {
     if (!popoverController) {
         ListViewController *vc = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
         [vc setUrlsArray:data];
@@ -91,34 +133,76 @@
         popover.popoverContentSize = CGSizeMake(420, 44 * data.count);
         popoverController = popover;
         [popoverController presentPopoverFromBarButtonItem:sender
-               permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+                                  permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     }
 }
 
-- (void)refresh {
-    [conn reload];
-}
-
-- (IBAction)reloadSites :(id)sender
-{
-    //NSLog (@"Reload requested");
-    [conn reload];
-}
-
-- (IBAction)goBack :(id)sender
-{
-    [webView goBack];
-}
-
-- (void)popoverControllerDidDismissPopover :(UIPopoverController *)pc
-{
+- (void)popoverControllerDidDismissPopover :(UIPopoverController *)pc {
     popoverController = nil;
 }
 
-- (IBAction)closePopover
-{
+- (IBAction)closePopover {
     [popoverController dismissPopoverAnimated:YES];
     popoverController = nil;
 }
+
+
+
+
+#pragma mark - Webview Delegate
+
+- (BOOL) webView:(UIWebView *) view shouldStartLoadWithRequest:(NSURLRequest *) request navigationType:(UIWebViewNavigationType) navigationType {
+    if (loadingNewSite || [view.request.URL.host isEqualToString:request.URL.host]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void) webViewDidStartLoad:(UIWebView *) view {
+    [self fadeOutPage];
+}
+
+- (void) webViewDidFinishLoad:(UIWebView *) view {
+    [self updateForwardBackButtons];
+    loadingNewSite = NO;
+    
+    pageTitle.text = [view stringByEvaluatingJavaScriptFromString:@"document.title"];
+    
+    [self fadeInPage];
+}
+
+- (void) webView:(UIWebView *) view didFailLoadWithError:(NSError *) error {
+}
+
+
+
+#pragma mark -
+
+- (void) fadeOutPage {
+    webView.userInteractionEnabled = NO;
+    activityIndicator.hidden = NO;
+    [UIView animateWithDuration:.3 delay:0 options:UIViewAnimationCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
+        pageTitle.alpha = 0;
+        webviewOverlay.alpha=1;
+        [activityIndicator startAnimating];
+    } completion:^(BOOL finished) {
+    }];
+}
+
+- (void) fadeInPage {
+    webView.userInteractionEnabled = YES;
+    [UIView animateWithDuration:.3 delay:0 options:UIViewAnimationCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
+        pageTitle.alpha = 1;
+        webviewOverlay.alpha = 0;
+    } completion:^(BOOL finished) {
+        [activityIndicator stopAnimating];
+        activityIndicator.hidden = YES;
+    }];
+}
+
+
+
+
+
 
 @end
