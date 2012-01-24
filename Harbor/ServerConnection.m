@@ -11,9 +11,6 @@
 #import "BrowserViewController.h"
 
 
-#define NO_SERVER TRUE
-
-
 @implementation ServerConnection
 
 @synthesize responseData;
