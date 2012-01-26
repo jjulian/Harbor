@@ -1,4 +1,4 @@
-# Harbor
+# ![icon](http://dl.dropbox.com/u/2460931/Icon-72.png) Harbor
 
 ## Getting students on the same page
 
@@ -6,8 +6,8 @@ An iPad app that loads sets of urls as pushed by the teacher.
 
 ### What problems does it solve?
 * It saves time: students to not need to waste classroom time typing urls
-* It avoids distractions: no url bar, so students are not tempted to browse the internet at large
-* With some extension, it can allow teachers to "push" information directly to the student's iPad
+* It avoids distractions: no url bar, so students are not tempted to browse the internet at large (classroom iPads can now have Safari disabled)
+* With some more work, it can allow teachers to "push" information directly to the student's iPad
 * Teachers can build sets of urls ahead of time, and direct students to them at will *"Open the Harbor app and read through the three pages I've shared. In ten minutes, we'll look at three more."*
 
 ### FIRST PLACE WINNER at Education Hack Day, November 12-13 2011
@@ -17,7 +17,7 @@ An iPad app that loads sets of urls as pushed by the teacher.
 * Teacher Experience (web site), CloudMine integration: Donald Abrams
 * Student Experience (iPad App): Jonathan Julian
 * Design, icons, "the pitch", MICA POV, rap music: [Ronin Wood](http://roninwoodalloneworddotcom.biz)
-* iOS design and flourishes: [Friends of the Web](http://friendsoftheweb.com/)
+* iOS design, icons, flourishes: [Friends of the Web](http://friendsoftheweb.com/)
 
 ![screenshot](http://dl.dropbox.com/u/2460931/iOS%20Simulator%20Screen%20shot%20Jan%2024%2C%202012%206.15.31%20PM.png)
 
